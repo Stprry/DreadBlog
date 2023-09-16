@@ -4,8 +4,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "src/assets" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/assets/img" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "src/assets/img" # Media files will be stored in the repo under static/images/uploads
+public_folder: "src/assets/img" # The src attribute for uploaded media will begin with /images/uploads
 
 
 collections:
@@ -15,9 +15,8 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/BlogPost.astro"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Publish Date", name: "pubDate", widget: "datetime"}
+      - {label: "Featured Image", name: "heroImage", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
