@@ -1,0 +1,1 @@
+{"type":"PR","pr":{"number":1,"head":"bc0983f7699e4955a3286f6a616f13bfd1036409"},"user":"stprry96","status":"draft","branch":"cms/test-post","collection":"blog","title":"Test post","description":"Blegh","objects":{"entry":{"path":"src/content/blog/test-post.md","sha":"860f3831ca061b54129e78d47cdce706b5da5370"},"files":[]},"timeStamp":"2023-09-16T21:37:06.864Z"}
