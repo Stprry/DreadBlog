@@ -1,11 +1,11 @@
 backend:
   name: git-gateway
-  branch: master 
+  branch: master # Change this to whatever your master is
 
 publish_mode: editorial_workflow
 
-media_folder: "public/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "public/uploads" # Media files will be stored here in public/Uploads you'll have to create this
+public_folder: "/uploads" # this is the post deployment folder for images
 
 
 collections:
@@ -18,5 +18,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "pubDate", widget: "datetime"}
-      - {label: "Featured Image", name: "heroImage", widget: "image", required: false}
+      - {label: "Featured Image", name: "heroImage", widget: "image", required: false} # set required to false can remove if you need 
       - {label: "Body", name: "body", widget: "markdown"}
