@@ -28,7 +28,7 @@ const posts = (await getCollection('blog')).sort(
 				{
 					posts.map((post) => (
 						<li class="transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
-							<a href={`/blog/${post.slug}/`} class="hover:text-orange-400 hover:">
+							<a href={`/blog/${post.slug}/`} class="hover:text-orange-400 text-gray-600">
 								<img class="object-cover h-48 w-96" src={post.data.heroImage } alt={`Sorry theres no image for ${post.slug}.`}/>
 								<h4 class="text-inherit">{post.data.title}</h4>
 								<p class="text-gray-400">
