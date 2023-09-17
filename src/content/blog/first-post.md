@@ -26,11 +26,11 @@ describe('Page1Functionality', () => {
 });
 ```
 
-Now as you can probably imagine this would get pretty tiedious doing this for 30 odd pages so there must of been a better way, after pondering on it we thought how about if we created a helper method and maybe we could loop through our pages array and generate tests within the loop, simple but after a quick google nothing really came up, this led us to do a quick experiement and see and the results are.. it worked! so heres what we ended up doing to get it to work.
+Now as you can probably imagine this would get pretty tedious doing this for 30 odd pages so there must of been a better way, after pondering on it we thought how about if we created a helper method and maybe we could loop through our pages array and generate tests within the loop, simple but after a quick google nothing really came up, this led us to do a quick experiment and see and the results are.. it worked! so here's what we ended up doing to get it to work.
 
 ```js
 // we first we need an array of our pages we have to go to, in this instance we'll
-pretend theyre all written out here in a pages array, you get the point..
+// pretend theyre all written out here in a pages array, you get the point..
 
 const pages = ["123456789page1", "123456789page2", "123456789page3"]
 
@@ -59,4 +59,4 @@ describe('PageNavigationFunctionality', () => {
 
 and viola we had a nice little test that would test all of our form navigation should go to the correct pages, granted this don't factor in any stuff that needs doing on the forms but our use case was needed for something else rather than navigation, it was just the first thing that came to my mind.\
 \
-Anyways I hope this was some what helpful, the syntax may not be 100% correct but hopefully it  prompts some people to experiment with itterative test generation.
+Anyways I hope this was some what helpful, the syntax may not be 100% correct but hopefully it  prompts some people to experiment with iterative test generation.
