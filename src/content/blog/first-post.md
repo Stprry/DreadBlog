@@ -19,10 +19,10 @@ describe('Page1Functionality', () => {
         cy.get('[data-cy="option_Yes"]')
             .click();
 
-        cy.proceedTo('/page2')
+        cy.url()
+         .should('contain', "route/page1");
+       });
     });
-
-
 });
 ```
 
