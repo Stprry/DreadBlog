@@ -13,7 +13,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
+		<!-- <style>
 			main {
 				width: calc(100% - 2em);
 				max-width: 100%;
@@ -51,19 +51,21 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
-		</style>
+		</style> -->
 	</head>
 
 	<body>
 		<Header />
-		<main>
+		<main class="flex flex-col justify-center mx-auto">
 			<article>
-				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+				<div class="">
+					{heroImage && <img width={1020} height={510} src={heroImage}
+					class="w-100 shadow-xl"
+					alt="Sorry theres no image availbe" />}
 				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
+				<div class="mb-4">
+					<div class="mb-2">
+						<div class="text-gray-500 mb-4">
 							<FormattedDate date={pubDate} />
 							{
 								updatedDate && (
@@ -73,10 +75,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 								)
 							}
 						</div>
-						<h1>{title}</h1>
+						<h1 class="font-bold text-2xl mb-2" >{title}</h1>
 						<hr />
 					</div>
-					<slot />
+
+					<slot/>
 				</div>
 			</article>
 		</main>
