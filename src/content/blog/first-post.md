@@ -30,7 +30,7 @@ Now as you can probably imagine this would get pretty tiedious doing this for 30
 
 ```js
 // we first we need an array of our pages we have to go to, in this instance we'll
-pretend theyre all written out here in a pages array, you get the point..
+// pretend theyre all written out here in a pages array, you get the point..
 
 const pages = ["123456789page1", "123456789page2", "123456789page3"]
 
